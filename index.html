@@ -8,20 +8,20 @@
 <meta property="og:title" content="Manuel Rivas | Veneiatech">
 <meta property="og:description" content="Empleados digitales, desarrollo de software, diseño UX/UI y contenido con IA.">
 <meta name="theme-color" content="#000000">
-<link rel="icon" type="image/png" href="/favicon.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Veneiatech">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://veneiatech-card.pages.dev/">
-<meta property="og:image" content="https://veneiatech-card.pages.dev/og-image.jpg">
+<meta property="og:url" content="https://veneiatech.github.io/Veneiatech/">
+<meta property="og:image" content="https://veneiatech.github.io/Veneiatech/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://veneiatech-card.pages.dev/og-image.jpg">
+<meta name="twitter:image" content="https://veneiatech.github.io/Veneiatech/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -704,7 +704,7 @@ $("#closeQr").addEventListener("click", () => $("#qrDialog").close());
 
 /* ---------- App instalable (funciona sin conexión) ---------- */
 if ("serviceWorker" in navigator && location.protocol === "https:"){
-  addEventListener("load", () => navigator.serviceWorker.register("/sw.js").catch(() => {}));
+  addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
 }
 </script>
 </body>
