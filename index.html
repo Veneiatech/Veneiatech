@@ -138,7 +138,8 @@ body.open .dossier{opacity:1;visibility:visible}
 .hero h1{font-family:var(--display);font-weight:500;font-size:clamp(42px,10vw,82px);line-height:1;letter-spacing:-.03em;
   background:linear-gradient(115deg,#f5f6f7 0%,#9aa1a9 35%,#ffffff 55%,#7f868e 80%,#d6dade 100%);
   -webkit-background-clip:text;background-clip:text;color:transparent}
-@media (hover:none),(pointer:coarse){.hero h1{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:#e6e9ec;-webkit-text-fill-color:#e6e9ec}}
+.hero h1:focus,.hero h1:focus-visible{outline:none}
+@media (hover:none),(pointer:coarse),(max-width:768px){.hero h1{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:#e6e9ec;-webkit-text-fill-color:#e6e9ec}}
 .role{margin-top:16px;font-size:17px;color:var(--steel)}
 .glass p,.glass h2,.glass h3{text-shadow:0 1px 12px rgba(0,0,0,.9)}
 .pitch{margin-top:30px;max-width:58ch;font-size:19px;line-height:1.6;color:#dadde1}
