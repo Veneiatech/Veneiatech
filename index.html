@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Manuel Rivas | Veneiatech</title>
-<meta name="description" content="Tarjeta de presentación de Manuel Rivas, fundador y CEO de Veneiatech.">
+<meta name="description" content="Visitenkarte von Manuel Rivas, Gründer und CEO von Veneiatech.">
 <meta property="og:title" content="Manuel Rivas | Veneiatech">
-<meta property="og:description" content="Empleados virtuales, automatización y desarrollo de software.">
+<meta property="og:description" content="Virtuelle Mitarbeiter, Automatisierung und Softwareentwicklung.">
 <meta name="theme-color" content="#000000">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -277,7 +277,7 @@ dialog[open] .holo-card{animation:holoIn .55s cubic-bezier(.2,.8,.2,1)}
 <!-- ===== 1. La tarjeta Platinum ===== -->
 <main class="stage" id="stage">
   <div class="lang lang-float" role="group" aria-label="Idioma">
-    <button data-lang="es" aria-pressed="true">ES</button><button data-lang="de" aria-pressed="false">DE</button>
+    <button data-lang="es" aria-pressed="false">ES</button><button data-lang="de" aria-pressed="true">DE</button>
   </div>
 
   <div class="card" id="card">
@@ -316,7 +316,7 @@ dialog[open] .holo-card{animation:holoIn .55s cubic-bezier(.2,.8,.2,1)}
     <header class="topbar">
       <div class="brand" id="topLogo"></div>
       <div class="lang" role="group" aria-label="Idioma">
-        <button data-lang="es" aria-pressed="true">ES</button><button data-lang="de" aria-pressed="false">DE</button>
+        <button data-lang="es" aria-pressed="false">ES</button><button data-lang="de" aria-pressed="true">DE</button>
       </div>
     </header>
 
@@ -428,7 +428,8 @@ const T = {
 };
 
 /* ---------- Utilidades ---------- */
-let lang = (navigator.language||"es").startsWith("de") ? "de" : "es";
+// Siempre abre en alemán; ?lang=es en el enlace la abre en español
+let lang = new URLSearchParams(location.search).get("lang") === "es" ? "es" : "de";
 const $ = s => document.querySelector(s);
 const t = k => T[lang][k];
 const waUrl = () => `https://wa.me/${CONFIG.whatsapp}`;
